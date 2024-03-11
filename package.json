@@ -4,8 +4,14 @@
   "description": "1. `npm init` --> Um Projekt zu intitalisieren",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "DOTENV_CONFIG_PATH=.test.env jest",
     "dev": "nodemon -r dotenv/config index.js"
+  },
+  "jest": {
+    "setupFiles": [
+      "dotenv/config",
+      "./tests/setup/jest.setup.js"
+    ]
   },
   "author": "",
   "license": "ISC",
