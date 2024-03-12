@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { AppRouter } = require("./routes");
 
-// Initialisierung von expres
+// Initialisierung von express
 const app = express();
 app.use(bodyParser.json());
 
