@@ -34,3 +34,5 @@ Die heute kennengelernten Stufen der Unabhängigkeit von Testern sind:
     Entwicklertester: Diese Tester sind Teil des Entwicklungsteams, aber ihre Hauptaufgabe besteht darin, die von ihnen entwickelten Funktionen zu testen. Sie können Einsicht in den Code haben, aber sie sollten dennoch eine unabhängige Sichtweise bewahren, um mögliche Fehler oder Probleme zu identifizieren.
 
     Benutzer- oder Akzeptanztester: Diese Tester repräsentieren die Endbenutzer der Software und prüfen, ob die Anwendung ihren Anforderungen und Erwartungen entspricht. Sie spielen eine wichtige Rolle bei der Validierung der Software aus Sicht der Benutzerfreundlichkeit und Funktionalität.
+
+### Zusammenfassend lässt sich sagen, dass die Unabhängigkeit der Tester eine entscheidende Rolle für die Qualitätssicherung in der Softwareentwicklung spielt. Durch die verschiedenen Stufen der Unabhängigkeit, nämlich selbstständige Tester, Entwicklertester und Benutzer- oder Akzeptanztester, wird sichergestellt, dass die Software aus verschiedenen Blickwinkeln gründlich überprüft wird.
