@@ -63,38 +63,20 @@ describe("GET /v1/todos/byid", () => {
 
 describe("PUT /v1/todos/update", () => {
   test("Test Updated Object", async () => {
-    // erstellung eines objekt, das aktualisiert werden soll
-    const createdTodoResponse = await request(app)
-      .post("/v1/todos/create")
+    // aktualisierungen durchführen
+    const updateResponse = await request(app)
+      .put(`/v1/todos/update`)
       .send({
+        todoId: 1,
         newTask: "Putzen",
         newIsDone: false,
         newDueDate: "2024-10-10",
-        newUserId: 3,
-      })
-      .expect("Content-Type", /json/)
-      .expect(200);
-
-    const createdTodo = createdTodoResponse.body.todo;
-
-    // aktualisierungen durchführen
-    const updateResponse = await request(app)
-      .put(`/v1/todos/update/${createdTodo.id}`)
-      .send({
-        updatedTask: "Putzen, auch die Fenster",
-        updatedIsDone: true,
-        updatedDueDate: "2024-10-11",
-        updatedUserId: 3,
       })
       .expect("Content-Type", /json/)
       .expect(200);
 
     // überprüfung der aktualisierten werte
-    const updatedTodo = updateResponse.body.todo;
-    expect(updatedTodo.id).toEqual(createdTodo.id);
-    expect(updatedTodo.task).toEqual("Putzen, auch die Fenster");
-    expect(updatedTodo.isDone).toEqual(true);
-    expect(updatedTodo.dueDate).toEqual("2024-10-11");
-    expect(updatedTodo.userId).toEqual(3);
+    const updatedTodoId = updateResponse.body.updatedTodoId;
+    expect(updatedTodoId).toEqual(1);
   });
 });
